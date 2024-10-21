@@ -1,0 +1,86 @@
+.main-div{
+  display: flex;
+  justify-content:center;
+  align-items: center;  
+  flex-direction: column;
+  height: 100vh;
+}
+body{
+  padding:0px;
+  margin:0px;
+  background: linear-gradient(90deg, rgb(116, 216, 252), rgb(156, 153, 254));
+}
+.mainheading{
+  font-size: 2.5rem;
+  margin:0px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+span{
+  color:hsl(291, 64%, 42%);
+
+}
+.subheading{
+  font-size: 20px;
+  color:hsla(0, 0%, 0%,60%)
+}
+.sub-div{
+  align-items: center;
+  flex-direction: column;
+}
+label{
+  font-size: 20px;
+  color:hsl(277, 100%, 45%);
+  font-weight: 300;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.headingdiv{
+  text-align: center;
+}
+input{
+  width: 90%;
+  height: 20%;
+  font-size: 18px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 20px;
+  border:none;
+  border-bottom: 1px solid black;
+  background: transparent;
+  outline: none;
+}
+button{
+  margin-right: 20px;
+  padding:10px;
+  border-radius: 5px;
+  border:none;
+  color:hsl(0, 0%, 95%);
+}
+.qr{
+  width:auto;
+  height: auto; 
+  margin:10px 0px;
+}
+.download-buttton{
+  background-color: hsl(135, 100%, 28%);
+}
+.QR-button{
+  background-color: rgb(255, 109, 182);
+}
+button:hover{
+  opacity:0.6;
+}
+
+@media only screen and (max-width:600px) {
+  body{
+    padding:4%;
+  }
+.main-div{
+  display: flex;
+  /* justify-content:none */
+  height: auto;
+  margin-top:10%;
+  gap:30px;
+}
+input{
+  margin-bottom: 30px;
+}
+}
