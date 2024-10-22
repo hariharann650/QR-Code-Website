@@ -7,18 +7,19 @@ const QRcode = () => {
   const [text, setText]= useState("test");
   const [size, setSize] = useState(0);
   const [downloading,setDownloading] = useState(true)
+
   async function generate(){    
-   
+    
+    if(isNaN(size) || size<=0){
+      alert("please enter the valid size");
+      return;
+      
+    }
     try{
-      if(isNaN(size) || size<=0){
-        alert("please enter the valid size");
-      }
-      else{
       setLoading(true);
       const Qr = `https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${encodeURIComponent(text)}`;
       setImg(Qr);
       setDownloading(false);
-    }
     }
     catch(error){
       console.error("The error is " + error)
@@ -49,8 +50,8 @@ function download(){
       <h3 className='subheading'>Easily generate and Download</h3>
       </div>
     <div className="qr-div">
-    {loading && <p>please wait...</p>}
     {img && <img className='qr' src={img} alt="nothing" />}  </div>
+    {loading && <p>Please Wait...</p>}
     <div className="sub-div">
       <label htmlFor="data">QR Code Content</label>
       <input type="text"  onChange={(e)=>setText(e.target.value)} id='data' placeholder='Enter Text or Link eg:" Your Name "'/>
