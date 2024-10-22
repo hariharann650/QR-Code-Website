@@ -77,10 +77,10 @@ button:hover{
   display: flex;
   /* justify-content:none */
   height: auto;
-  margin-top:10%;
-  gap:30px;
+  margin-top:5%;
+  gap:25px;
 }
 input{
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 }
