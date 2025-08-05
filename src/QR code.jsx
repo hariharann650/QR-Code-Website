@@ -54,7 +54,9 @@ function download(){
     {loading && <p>Please Wait...</p>}
     <div className="sub-div">
       <label htmlFor="data">QR Code Content</label>
-      <input type="text"  onChange={(e)=>setText(e.target.value)} id='data' placeholder='Enter Text or Link eg:" Your Name "'/>
+      <input type="text" onKeyDown={(e)=>{if(e.key === 'Enter'){  
+        generate()
+      }}} onChange={(e)=>setText(e.target.value)} id='data' placeholder='Enter Text or Link eg:" Your Name "'/>
       <br />
       <label htmlFor="image-size"  >Image Size</label>  
       <input type="text" onKeyDown={(e)=>{if(e.key === 'Enter'){  
