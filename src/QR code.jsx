@@ -6,7 +6,7 @@ const QRcode = () => {
   const [loading, setLoading] = useState(false);
   const [img, setImg] = useState(qr);
   const [text, setText] = useState("test");
-  const [size, setSize] = useState(180);
+  const [size, setSize] = useState(250);
   const [downloading, setDownloading] = useState(true);
 
   async function generate() {
